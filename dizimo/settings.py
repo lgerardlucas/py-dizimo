@@ -17,10 +17,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'comunidade',
-    'dizimista',
-    'dizimista_controle',
+    'cad_comunidade',
+    'cad_dizimista',
+    'cad_missionario',
 ]
+
+ADMIN_ORDERING = [
+        ('missionario', '*'),
+        ('dizimista', '*'),
+        ('dizimista_controle', '*'),
+        ('comunidade', '*'),
+    ]
 
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 

@@ -5,4 +5,4 @@ class ComunidadeAdmin(admin.ModelAdmin):
     list_display = ('nome',)
     list_diplay_links = ('nome',)
 
-#admin.site.register(Comunidade,ComunidadeAdmin)
+admin.site.register(Comunidade,ComunidadeAdmin)

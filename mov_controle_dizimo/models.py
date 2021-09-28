@@ -20,15 +20,15 @@ MES_CHOICES = (
         ('12', 'Dezembro')
 )
 
-class Dizimista_Controle(models.Model):
+class Controle_Dizimo(models.Model):
     dizimista = models.ForeignKey('dizimista.Dizimista', on_delete=models.CASCADE, null=True, blank=True, related_name='dizimista_controle', verbose_name='Dizimista-Controle')
     ano = models.IntegerField('Ano', choices=ANO_CHOICES, null=False, blank=False)
     mes = models.CharField('Mês',max_length=2, choices=MES_CHOICES, null=False, blank=False)
 
     class Meta:
-        verbose_name = 'Dizimista-Controle'
-        verbose_name_plural = 'Dizimistas-Controle'
-        ordering = ['ano']
+        verbose_name = 'Controle-Dízimo'
+        verbose_name_plural = 'Controle-Dízimos'
+        ordering = ['ano','mes',]
 
     def __str__(self):
         return self.dizimista.nome

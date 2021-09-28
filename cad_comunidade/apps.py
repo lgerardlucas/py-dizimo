@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DizimistaConfig(AppConfig):
+class CadComunidadeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'dizimista'
+    name = 'cad_comunidade'

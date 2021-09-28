@@ -6,11 +6,11 @@ admin.site.unregister(Group)
 admin.site.unregister(User)
 
 class DizimistaAdmin(admin.ModelAdmin):
-
-    list_display = ('nome', 'telefone', 'nascimento', 'comunidade')
+    list_display = ('nome', 'telefone', 'nascimento', 'comunidade', 'missionario')
     list_diplay_links = ('nome',)
-    list_filter = ('nome', 'telefone', 'nascimento')
 
+    list_filter = ('nome','missionario')
+    search_fields = ('nome', 'telefone', 'nascimento',)
 
     save_on_top = False
     actions_on_top = True
