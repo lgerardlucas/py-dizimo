@@ -4,9 +4,10 @@ from pathlib import Path
 from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'django-insecure-8%a)9^c73v%+-53gby+6aa82o^l@u*ed86%()8*z1+%ydqhw8m'
-DEBUG = True
+SECRET_KEY = SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['*']
+INTERNAL_IPS = ['127.0.0.1']
 
 INSTALLED_APPS = [
     'admin_interface',
@@ -20,6 +21,7 @@ INSTALLED_APPS = [
     'cad_comunidade',
     'cad_dizimista',
     'cad_missionario',
+    'mov_controle_dizimo',
 ]
 
 ADMIN_ORDERING = [
@@ -61,12 +63,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dizimo.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': config('ENGINE'),
+        'NAME': config('NAME'),
+        'USER': config('ROLE'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': '5432',
     }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -8,10 +8,6 @@ class Dizimista(models.Model):
     comunidade = models.ForeignKey('cad_comunidade.Comunidade', on_delete=models.CASCADE, null=True, blank=True, related_name='cad_comunidade', verbose_name='Comunidade')
     missionario = models.ForeignKey('cad_missionario.Missionario', on_delete=models.CASCADE, null=True, blank=True, related_name='cad_missionario', verbose_name='Missionario')
 
-    # def mes_aniversario(self):
-    #     return self.nascimento.strftime("%m")
-    # mes_aniversario.short_description = 'Mês Aniversário'
-
     class Meta:
         verbose_name = 'Dizimista'
         verbose_name_plural = 'Dizimistas'

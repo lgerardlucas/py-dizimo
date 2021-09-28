@@ -21,7 +21,7 @@ MES_CHOICES = (
 )
 
 class Controle_Dizimo(models.Model):
-    dizimista = models.ForeignKey('dizimista.Dizimista', on_delete=models.CASCADE, null=True, blank=True, related_name='dizimista_controle', verbose_name='Dizimista-Controle')
+    dizimista = models.ForeignKey('cad_dizimista.Dizimista', on_delete=models.CASCADE, null=True, blank=True, related_name='dizimista_controle', verbose_name='Dizimista-Controle')
     ano = models.IntegerField('Ano', choices=ANO_CHOICES, null=False, blank=False)
     mes = models.CharField('Mês',max_length=2, choices=MES_CHOICES, null=False, blank=False)
 

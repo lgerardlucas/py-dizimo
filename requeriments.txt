@@ -8,6 +8,7 @@ django-admin-interface==0.17.0
 django-colorfield==0.4.3
 django-flat-responsive==2.0
 django-flat-theme==1.1.4
+gunicorn==20.1.0
 importlib-metadata==4.5.0
 mypy-extensions==0.4.3
 pathspec==0.8.1
