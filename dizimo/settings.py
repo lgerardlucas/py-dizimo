@@ -25,13 +25,6 @@ INSTALLED_APPS = [
     'mov_controle_dizimo',
 ]
 
-ADMIN_ORDERING = [
-        ('missionario', '*'),
-        ('dizimista', '*'),
-        ('dizimista_controle', '*'),
-        ('comunidade', '*'),
-    ]
-
 #X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 
 MIDDLEWARE = [
@@ -132,7 +125,7 @@ STATICFILES_DIRS = (
 )
 
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static/media/'))
 MEDIA_URL = '/media/'
