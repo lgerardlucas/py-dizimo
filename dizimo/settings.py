@@ -2,9 +2,9 @@ import os
 import psycopg2
 from pathlib import Path
 from decouple import config
-import django_heroku
+#import django_heroku
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY = config('SECRET_KEY')
