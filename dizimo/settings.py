@@ -13,8 +13,6 @@ ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ['127.0.0.1']
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
