@@ -10,4 +10,5 @@ admin.sites.AdminSite.index_title = 'Controle de Dizimista'
 
 urlpatterns = [
     path('', admin.site.urls),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

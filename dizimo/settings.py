@@ -32,7 +32,7 @@ ADMIN_ORDERING = [
         ('comunidade', '*'),
     ]
 
-X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
+#X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
